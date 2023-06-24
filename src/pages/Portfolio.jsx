@@ -22,21 +22,19 @@ function Portfolio() {
   };
 
   return (
-    <>
-      <div id="portfolio" className="w-[90%] mx-auto text-lg">
-        <h3 className="dark:text-[#00FF00] text-2xl md:text-3xl pt-4 pb-1 font-mono font-semibold text-center">
-          Portofolio
-        </h3>
+    <div id="portfolio" className="w-[90%] mx-auto text-lg">
+      <h3 className="dark:text-[#00FF00] text-2xl md:text-3xl pt-4 pb-1 font-mono font-semibold text-center">
+        Portofolio
+      </h3>
 
-        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-          I have successfully built various projects using{" "}
-          <span className="text-teal-500">React.js and Next.js</span> ,
-          including a captivating shopping web app and visually appealing
-          personal websites. These projects showcase my expertise in creating
-          dynamic, user-friendly interfaces and leveraging the power of these
-          frameworks to deliver fast and engaging web experiences.
-        </p>
-      </div>
+      <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+        I have successfully built various projects using{" "}
+        <span className="text-teal-500">React.js and Next.js</span> , including
+        a captivating shopping web app and visually appealing personal websites.
+        These projects showcase my expertise in creating dynamic, user-friendly
+        interfaces and leveraging the power of these frameworks to deliver fast
+        and engaging web experiences.
+      </p>
 
       <div className="flex flex-col gap-6 py-10 md:flex-row md:flex-wrap">
         <ImageCard src={web1} />
@@ -46,7 +44,7 @@ function Portfolio() {
         <ImageCard src={web5} />
         <ImageCard src={web6} />
       </div>
-    </>
+    </div>
   );
 }
 

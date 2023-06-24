@@ -14,7 +14,7 @@ export default function Main() {
         Developer and designer!
       </h3>
 
-      <p className="tracking-wider leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+      <p className="tracking-wider leading-8 text-gray-800 dark:text-gray-200 max-w-3xl mx-auto md:text-xl">
         Freelancer providing services for programming and design content needs.{" "}
         <br />
         Join me down below and let's get cracking!
