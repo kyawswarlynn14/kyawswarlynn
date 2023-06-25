@@ -7,16 +7,23 @@ import web5 from "../assets/web5.png";
 import web6 from "../assets/web6.png";
 
 function Portfolio() {
-  const ImageCard = ({ src }) => {
+  const ImageCard = ({ src, codeLink }) => {
     return (
-      <div className="basis-1/3 flex-1" id="portofolio">
+      <div className="basis-1/3 flex-1 relative">
         <img
-          className="rounded-lg object-cover"
+          className="rounded-lg object-cover mb-4"
           width={"100%"}
           height={"100%"}
           layout="responsive"
           src={src}
         />
+
+        <a
+          href={codeLink}
+          className="bg-blue-700 text-white p-2  hover:bg-yellow-700 rounded-lg absolute top-1 right-1"
+        >
+          view code
+        </a>
       </div>
     );
   };
@@ -37,12 +44,23 @@ function Portfolio() {
       </p>
 
       <div className="flex flex-col gap-6 py-10 md:flex-row md:flex-wrap">
-        <ImageCard src={web1} />
-        <ImageCard src={web2} />
-        <ImageCard src={web3} />
-        <ImageCard src={web4} />
-        <ImageCard src={web5} />
-        <ImageCard src={web6} />
+        <ImageCard
+          src={web1}
+          codeLink="https://github.com/kyawswarlynn14/palaungminthar"
+        />
+
+        <ImageCard
+          src={web2}
+          codeLink="https://github.com/kyawswarlynn14/palaungminthar"
+        />
+
+        <ImageCard src={web3} codeLink="https://github.com/kyawswarlynn14/" />
+
+        <ImageCard src={web4} codeLink="https://github.com/kyawswarlynn14/" />
+
+        <ImageCard src={web5} codeLink="https://github.com/kyawswarlynn14/" />
+
+        <ImageCard src={web6} codeLink="https://github.com/kyawswarlynn14/" />
       </div>
     </div>
   );

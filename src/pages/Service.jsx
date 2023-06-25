@@ -23,8 +23,8 @@ function Service() {
   };
 
   return (
-    <div id="service">
-      <div className="w-[90%] mx-auto mb-4 md:text-lg">
+    <div id="service" className="w-[90%] mx-auto">
+      <div className=" mb-4 md:text-lg">
         <h3 className="dark:text-[#00FF00] text-2xl md:text-3xl md:mb-4 py-1 font-mono font-semibold text-center">
           Services I offer
         </h3>
