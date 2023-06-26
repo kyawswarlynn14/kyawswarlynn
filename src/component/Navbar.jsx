@@ -44,15 +44,15 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const easeOutQuart = (t) => 1 - --t * t * t * t;
 
   return (
-    <nav className="md:text-lg py-4 flex justify-between border-b-2 border-gray-600">
-      <h1 className=" font-bold tracking-wider font-mono">DevelopedByKSL</h1>
-      <ul className="flex gap-8 font-semibold">
+    <nav className="md:text-lg pt-3  flex justify-between border-b-2 border-gray-600 dark:text-white">
+      <p className=" font-bold tracking-wider font-mono">DevelopedByKSL</p>
+      <ul className="flex gap-8 font-semibold ">
         <a
           onClick={() => handleClick("home")}
           className={`
             ${
               activeButton == "home" ? "border-b-4 border-green-600" : ""
-            } hidden md:block cursor-pointer
+            } hidden md:block cursor-pointer no-underline
           `}
         >
           Home
@@ -63,7 +63,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
           className={`
             ${
               activeButton == "service" ? "border-b-4 border-green-600" : ""
-            } hidden md:block cursor-pointer
+            } hidden md:block cursor-pointer no-underline
           `}
         >
           Service
@@ -74,7 +74,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
           className={`
             ${
               activeButton == "portfolio" ? "border-b-4 border-green-600" : ""
-            } hidden md:block cursor-pointer
+            } hidden md:block cursor-pointer no-underline
           `}
         >
           Portfolio
@@ -99,19 +99,13 @@ export default function Navbar({ darkMode, setDarkMode }) {
           popUp ? "block" : "hidden"
         } bg-slate-900 text-white absolute top-14 right-0 w-40 h-48 border-2 rounded-lg flex flex-col justify-evenly text-center`}
       >
-        <a href="#home" className="bg-slate-600 rounded-lg p-2 cursor-pointer">
+        <a href="#home" className="btn btn-primary">
           Home
         </a>
-        <a
-          href="#service"
-          className="bg-slate-600 rounded-lg p-2 cursor-pointer"
-        >
+        <a href="#service" className="btn btn-primary">
           Services
         </a>
-        <a
-          href="#portfolio"
-          className="bg-slate-600 rounded-lg p-2 cursor-pointer"
-        >
+        <a href="#portfolio" className="btn btn-primary">
           Portfolio
         </a>
       </div>

@@ -23,7 +23,7 @@ function Service() {
   };
 
   return (
-    <div id="service" className="w-[90%] mx-auto">
+    <div id="service" className="w-[90%] mx-auto mt-10">
       <div className=" mb-4 md:text-lg">
         <h3 className="dark:text-[#00FF00] text-2xl md:text-3xl md:mb-4 py-1 font-mono font-semibold text-center">
           Services I offer
@@ -46,7 +46,7 @@ function Service() {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between gap-8 pb-4">
+      <div className="flex flex-col md:flex-row justify-between gap-8">
         <ServiceCard src={design} />
 
         <ServiceCard src={code} />

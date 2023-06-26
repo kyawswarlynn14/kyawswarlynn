@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import web1 from "../assets/web1.jpg";
 import web2 from "../assets/web2.jpg";
 import web3 from "../assets/web3.jpg";
@@ -18,10 +19,7 @@ function Portfolio() {
           src={src}
         />
 
-        <a
-          href={codeLink}
-          className="bg-blue-700 text-white p-2  hover:bg-yellow-700 rounded-lg absolute top-1 right-1"
-        >
+        <a href={codeLink} className="btn btn-primary absolute top-1 right-1">
           view code
         </a>
       </div>
@@ -29,7 +27,7 @@ function Portfolio() {
   };
 
   return (
-    <div id="portfolio" className="w-[90%] mx-auto text-lg">
+    <div id="portfolio" className="w-[90%] mx-auto text-lg mt-10">
       <h3 className="dark:text-[#00FF00] text-2xl md:text-3xl pt-4 pb-1 font-mono font-semibold text-center">
         Portofolio
       </h3>
