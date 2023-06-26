@@ -19,7 +19,11 @@ function Portfolio() {
           src={src}
         />
 
-        <a href={codeLink} className="btn btn-primary absolute top-1 right-1">
+        <a
+          href={codeLink}
+          target="_blank"
+          className="btn btn-primary absolute top-1 right-1"
+        >
           view code
         </a>
       </div>
