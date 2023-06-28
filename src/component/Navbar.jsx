@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 
 export default function Navbar({ darkMode, setDarkMode }) {
@@ -51,7 +51,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
           onClick={() => handleClick("home")}
           className={`
             ${
-              activeButton == "home" ? "border-b-4 border-green-600" : ""
+              activeButton === "home" ? "border-b-4 border-green-600" : ""
             } hidden md:block cursor-pointer no-underline
           `}
         >
@@ -62,7 +62,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
           onClick={() => handleClick("service")}
           className={`
             ${
-              activeButton == "service" ? "border-b-4 border-green-600" : ""
+              activeButton === "service" ? "border-b-4 border-green-600" : ""
             } hidden md:block cursor-pointer no-underline
           `}
         >
@@ -73,17 +73,20 @@ export default function Navbar({ darkMode, setDarkMode }) {
           onClick={() => handleClick("portfolio")}
           className={`
             ${
-              activeButton == "portfolio" ? "border-b-4 border-green-600" : ""
+              activeButton === "portfolio" ? "border-b-4 border-green-600" : ""
             } hidden md:block cursor-pointer no-underline
           `}
         >
           Portfolio
         </a>
 
-        <BsFillMoonStarsFill
-          onClick={() => setDarkMode(!darkMode)}
-          className=" cursor-pointer text-3xl"
-        />
+        <div>
+          {darkMode ? (
+            <BsFillSunFill onClick={() => setDarkMode(!darkMode)} className=" cursor-pointer text-3xl" />
+          ) : (
+            <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className=" cursor-pointer text-3xl" />
+          )}
+        </div>
 
         <div className="md:hidden">
           {popUp ? (
