@@ -24,6 +24,7 @@ export default function Main() {
         <a
           className="text-gray-600 dark:text-gray-300"
           href="https://github.com/kyawswarlynn14"
+          target="_blank"
         >
           <AiFillGithub cursor="pointer" />
         </a>
@@ -31,6 +32,7 @@ export default function Main() {
         <a
           className="text-gray-600 dark:text-gray-300"
           href="https://web.facebook.com/profile.php?id=100027180840462"
+          target="_blank"
         >
           <AiFillFacebook cursor="pointer" />
         </a>
@@ -38,6 +40,7 @@ export default function Main() {
         <a
           className="text-gray-600 dark:text-gray-300"
           href="https://linkedin.com/in/kyaw-swar-lynn-78ab79260/"
+          target="_blank"
         >
           <AiFillLinkedin cursor="pointer" />
         </a>
@@ -45,6 +48,7 @@ export default function Main() {
         <a
           className="text-gray-600 dark:text-gray-300"
           href="https://t.me/kyawswarlynn14"
+          target="_blank"
         >
           <FaTelegram cursor="pointer" />
         </a>
