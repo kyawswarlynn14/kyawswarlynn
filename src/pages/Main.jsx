@@ -11,7 +11,7 @@ export default function Main() {
       </h2>
 
       <h3 className="text-xl md:text-2xl py-3 tracking-wider">
-        Developer and designer!
+        Developer and Designer!
       </h3>
 
       <p className="tracking-wider leading-8 text-gray-800 dark:text-gray-200 max-w-3xl mx-auto md:text-xl">
