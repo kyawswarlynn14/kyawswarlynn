@@ -15,21 +15,21 @@ function Footer() {
 
         <div>
           <h4 className="text-center mb-2">Contact</h4>
-          <p className="text-sm sm:text-base">
+          <p>
             <GoLocation className="inline-flex mr-2" /> 63(B), Between 20x21, Mandalay
           </p>
-          <p className="text-sm sm:text-base">
+          <p>
             <AiFillPhone className="inline-flex mr-2" /> +959266654144, +959767600246
           </p>
 
-          <p className="text-sm sm:text-base">
+          <p>
             <AiFillMail className="inline-flex mr-2" /> kyawswarlynn14@gmail.com
           </p>
         </div>
 
         <div>
           <h4 className="text-center mb-2">Navigations</h4>
-          <div className="flex gap-4 font-semibold">
+          <div className="flex justify-between gap-4 font-semibold w-[90%] mx-auto">
             <a href="#home" className="no-underline text-white">Home</a>
             <span>|</span>
             <a href="#service" className="no-underline text-white">Service</a>
