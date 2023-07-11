@@ -3,10 +3,10 @@ import { AiFillPhone, AiFillMail, AiOutlineCopyrightCircle } from "react-icons/a
 import { GoLocation } from "react-icons/go";
 import ksl from '../assets/ksl.jpg'
 
-function Footer({darkMode}) {
+function Footer() {
   return (
     <div className={`text-white w-full border-t-2 py-4 rounded-tl-3xl`}>
-      <div className="w-[80%] mx-auto md:flex justify-between">
+      <div className="md:w-[80%] mx-auto px-2 md:px-0 md:flex justify-between">
         <div className="text-center">
           <img src={ksl} alt="ksl img" className="w-12 h-12 rounded-full mb-3 mx-auto"/>
           <h4>Kyaw Swar Lynn</h4>

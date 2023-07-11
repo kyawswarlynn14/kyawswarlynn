@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kyawswarlynn/static/css/main.d1a3b603.css",
-    "main.js": "/kyawswarlynn/static/js/main.30dcceec.js",
+    "main.css": "/kyawswarlynn/static/css/main.afcb47da.css",
+    "main.js": "/kyawswarlynn/static/js/main.91783443.js",
     "static/media/web6.png": "/kyawswarlynn/static/media/web6.e4ab20a7ce79adbcbf79.png",
     "static/media/web5.png": "/kyawswarlynn/static/media/web5.9e9578f2477312721d00.png",
     "static/media/ksl.jpg": "/kyawswarlynn/static/media/ksl.1665c75cb0444f9c4fcd.jpg",
@@ -13,11 +13,11 @@
     "static/media/consulting.png": "/kyawswarlynn/static/media/consulting.2dc7284300c84181539e.png",
     "static/media/code.png": "/kyawswarlynn/static/media/code.f4f54b48494bb8e30d1a.png",
     "index.html": "/kyawswarlynn/index.html",
-    "main.d1a3b603.css.map": "/kyawswarlynn/static/css/main.d1a3b603.css.map",
-    "main.30dcceec.js.map": "/kyawswarlynn/static/js/main.30dcceec.js.map"
+    "main.afcb47da.css.map": "/kyawswarlynn/static/css/main.afcb47da.css.map",
+    "main.91783443.js.map": "/kyawswarlynn/static/js/main.91783443.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1a3b603.css",
-    "static/js/main.30dcceec.js"
+    "static/css/main.afcb47da.css",
+    "static/js/main.91783443.js"
   ]
 }

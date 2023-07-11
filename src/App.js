@@ -24,7 +24,7 @@ function App() {
             <Portfolio />
         </div>
 
-        <Footer darkMode={darkMode} />
+        <Footer />
     </div>
   );
 }
