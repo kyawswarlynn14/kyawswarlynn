@@ -8,12 +8,12 @@ function Service() {
     return (
       <div className="w-72 mx-auto flex flex-col text-center place-items-center p-2 rounded-xl shadow-2xl">
         <img src={src} width={100} height={100} />
-        <h3 className="text-lg font-medium pt-8 pb-2  ">Beautiful Designs</h3>
-        <p className="py-2 text-[#fdeed4]">
+        <h3 className="text-lg font-medium py-2  ">Beautiful Designs</h3>
+        <p className=" text-[#fdeed4]">
           Creating elegant designs suited for your needs following core design
           theory.
         </p>
-        <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+        <p className="py-2 text-teal-600 text-lg">Design Tools I Use</p>
         <p>Photoshop</p>
         <p>Illustrator</p>
         <p>Figma</p>

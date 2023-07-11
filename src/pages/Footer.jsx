@@ -15,14 +15,14 @@ function Footer({darkMode}) {
 
         <div>
           <h4 className="text-center mb-2">Contact</h4>
-          <p>
+          <p className="text-sm sm:text-base">
             <GoLocation className="inline-flex mr-2" /> 63(B), Between 20x21, Mandalay
           </p>
-          <p>
+          <p className="text-sm sm:text-base">
             <AiFillPhone className="inline-flex mr-2" /> +959266654144, +959767600246
           </p>
 
-          <p>
+          <p className="text-sm sm:text-base">
             <AiFillMail className="inline-flex mr-2" /> kyawswarlynn14@gmail.com
           </p>
         </div>
