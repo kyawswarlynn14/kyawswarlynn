@@ -8,7 +8,6 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const [activeButton, setActiveButton] = useState("");
 
   const handleClick = (btn) => {
-    scrollToSection(btn);
     handleButtonClick(btn);
   };
 
@@ -16,38 +15,12 @@ export default function Navbar({ darkMode, setDarkMode }) {
     setActiveButton(buttonName);
   };
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const targetPosition = section.offsetTop;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      const duration = 1000; // Adjust this value to control the scroll speed
-      let startTimestamp;
-
-      const scrollStep = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const elapsed = timestamp - startTimestamp;
-        const progress = Math.min(elapsed / duration, 1);
-        const easing = easeOutQuart(progress);
-        window.scrollTo(0, startPosition + distance * easing);
-
-        if (elapsed < duration) {
-          window.requestAnimationFrame(scrollStep);
-        }
-      };
-
-      window.requestAnimationFrame(scrollStep);
-    }
-  };
-
-  const easeOutQuart = (t) => 1 - --t * t * t * t;
-
   return (
-    <nav className="md:text-lg pt-3  flex justify-between border-b-2 border-gray-600 dark:text-white">
+    <nav className="md:w-[80%] mx-auto md:text-lg pt-3 flex justify-between border-b-2 border-gray-300 px-2">
       <p className=" font-bold tracking-wider font-mono">DevelopedByKSL</p>
       <ul className="flex gap-8 font-semibold ">
         <a
+          href="#home"
           onClick={() => handleClick("home")}
           className={`
             ${
@@ -59,6 +32,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
         </a>
 
         <a
+          href="#service"
           onClick={() => handleClick("service")}
           className={`
             ${
@@ -70,6 +44,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
         </a>
 
         <a
+          href="#portfolio"
           onClick={() => handleClick("portfolio")}
           className={`
             ${
@@ -100,18 +75,19 @@ export default function Navbar({ darkMode, setDarkMode }) {
       <div
         className={`${
           popUp ? "block" : "hidden"
-        } bg-slate-900 text-white absolute top-14 right-0 w-40 h-48 border-2 rounded-lg flex flex-col justify-evenly text-center`}
+        } bg-slate-900 text-white absolute top-14 right-0 w-[60%] h-48 border-2 rounded-lg flex flex-col justify-evenly text-center`}
       >
-        <a href="#home" className="btn btn-primary">
+        <a onClick={() => setPopUp(!popUp)} href="#home" className="btn btn-primary">
           Home
         </a>
-        <a href="#service" className="btn btn-primary">
+        <a onClick={() => setPopUp(!popUp)} href="#service" className="btn btn-primary">
           Services
         </a>
-        <a href="#portfolio" className="btn btn-primary">
+        <a onClick={() => setPopUp(!popUp)} href="#portfolio" className="btn btn-primary">
           Portfolio
         </a>
       </div>
     </nav>
+
   );
 }

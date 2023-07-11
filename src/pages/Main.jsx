@@ -5,8 +5,8 @@ import ksl from "../assets/ksl.jpg";
 
 export default function Main() {
   return (
-    <div id="home" className="text-center pt-3 dark:text-white">
-      <h2 className="tracking-wider font-serif text-3xl text-teal-600 font-bold md:text-5xl">
+    <div id="home" className="text-center pt-3">
+      <h2 className="tracking-wider font-serif text-3xl dark:text-teal-600 font-bold md:text-5xl">
         Kyaw Swar Lynn
       </h2>
 
@@ -14,7 +14,7 @@ export default function Main() {
         Developer and Designer!
       </h3>
 
-      <p className="tracking-wider leading-8 text-gray-800 dark:text-gray-200 max-w-3xl mx-auto md:text-xl">
+      <p className="tracking-wider leading-8 text-[#fdeed4] max-w-3xl mx-auto md:text-xl">
         Freelancer providing services for programming and design content needs.{" "}
         <br />
         Join me down below and let's get cracking!
@@ -22,7 +22,7 @@ export default function Main() {
 
       <div className="w-64 md:w-80 mx-auto text-5xl flex justify-between py-3 ">
         <a
-          className="text-gray-600 dark:text-gray-300"
+          className="text-[#fdeed4]"
           href="https://github.com/kyawswarlynn14"
           target="_blank"
         >
@@ -30,7 +30,7 @@ export default function Main() {
         </a>
 
         <a
-          className="text-gray-600 dark:text-gray-300"
+          className="text-[#fdeed4]"
           href="https://web.facebook.com/profile.php?id=100027180840462"
           target="_blank"
         >
@@ -38,7 +38,7 @@ export default function Main() {
         </a>
 
         <a
-          className="text-gray-600 dark:text-gray-300"
+          className="text-[#fdeed4]"
           href="https://linkedin.com/in/kyaw-swar-lynn-78ab79260/"
           target="_blank"
         >
@@ -46,7 +46,7 @@ export default function Main() {
         </a>
 
         <a
-          className="text-gray-600 dark:text-gray-300"
+          className="text-[#fdeed4]"
           href="https://t.me/kyawswarlynn14"
           target="_blank"
         >

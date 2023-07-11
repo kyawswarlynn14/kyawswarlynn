@@ -4,25 +4,27 @@ import Navbar from './component/Navbar';
 import Main from './pages/Main';
 import Service from './pages/Service';
 import Portfolio from './pages/Portfolio';
+import Footer from './pages/Footer';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
   
   return (
-    <div className={`${darkMode ? "dark" : ""} m-0`}>
-      <div className='bg-[#F5F5DC] dark:bg-gray-900 text-black dark:text-white'>
+    <div className={`${darkMode ? "dark bg-gray-900" : "bg-gradient-to-r from-[#ff69b0] to-[#ffb5a8]"} text-white m-0`}>
+
+        <div className={`${darkMode ? "bg-gray-900" : "bg-gradient-to-r from-[#ff69b0] to-[#ffb5a8]"} sticky top-0 z-50`}>
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        </div>
+
         <div className='min-h-screen w-[95%] md:w-[80%] mx-auto'>
-            <div className='sticky top-0 bg-[#F5F5DC] dark:bg-gray-900 z-50'>
-              <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-            </div>
-            
             <Main />
 
             <Service />
 
             <Portfolio />
         </div>
-      </div>
+
+        <Footer darkMode={darkMode} />
     </div>
   );
 }

@@ -36,9 +36,9 @@ function Portfolio() {
         Portofolio
       </h3>
 
-      <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+      <p className="text-md py-2 leading-8 text-[#fdeed4]">
         I have successfully built various projects using{" "}
-        <span className="text-teal-500">React.js and Next.js</span> , including
+        <span className="dark:text-teal-500">React.js and Next.js</span> , including
         a captivating shopping web app and visually appealing personal websites.
         These projects showcase my expertise in creating dynamic, user-friendly
         interfaces and leveraging the power of these frameworks to deliver fast

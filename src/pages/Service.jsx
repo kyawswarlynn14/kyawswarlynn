@@ -6,18 +6,18 @@ import consulting from "../assets/consulting.png";
 function Service() {
   const ServiceCard = ({ src }) => {
     return (
-      <div className="w-72 mx-auto flex flex-col text-center place-items-center p-2 rounded-xl dark:bg-[#F5F5DC] dark:text-black shadow-2xl">
+      <div className="w-72 mx-auto flex flex-col text-center place-items-center p-2 rounded-xl shadow-2xl">
         <img src={src} width={100} height={100} />
         <h3 className="text-lg font-medium pt-8 pb-2  ">Beautiful Designs</h3>
-        <p className="py-2">
+        <p className="py-2 text-[#fdeed4]">
           Creating elegant designs suited for your needs following core design
           theory.
         </p>
         <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-        <p className="text-gray-800 py-1">Photoshop</p>
-        <p className="text-gray-800 py-1">Illustrator</p>
-        <p className="text-gray-800 py-1">Figma</p>
-        <p className="text-gray-800 py-1">Indesign</p>
+        <p>Photoshop</p>
+        <p>Illustrator</p>
+        <p>Figma</p>
+        <p>Indesign</p>
       </div>
     );
   };
@@ -29,18 +29,18 @@ function Service() {
           Services I offer
         </h3>
 
-        <p className=" text-md leading-8 text-gray-800 dark:text-gray-200">
+        <p className=" text-md leading-8 text-[#fdeed4]">
           I specialize in creating dynamic and responsive websites using the
           latest web technologies such as{" "}
-          <span className="text-teal-500">
+          <span className="dark:text-teal-500">
             React.js, Next.js, Angular, and Node.js
           </span>
           . With my expertise in{" "}
-          <span className="text-teal-500">JavaScript, HTML, and CSS</span> , I
+          <span className="dark:text-teal-500">JavaScript, HTML, and CSS</span> , I
           craft engaging and user-friendly interfaces.
         </p>
 
-        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+        <p className="text-md py-2 leading-8 text-[#fdeed4]">
           I offer from a wide range of services, including brand design,
           programming and teaching.
         </p>
