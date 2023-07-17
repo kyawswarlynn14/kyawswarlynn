@@ -22,7 +22,7 @@ function Portfolio() {
         <a
           href={codeLink}
           target="_blank"
-          className="btn btn-primary absolute top-1 right-1"
+          className="btn btn-info absolute top-1 right-1"
         >
           view code
         </a>
