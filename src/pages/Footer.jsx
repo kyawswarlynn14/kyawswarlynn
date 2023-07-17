@@ -6,14 +6,14 @@ import ksl from '../assets/ksl.jpg'
 function Footer() {
   return (
     <div className={`text-white w-full border-t-2 py-4 rounded-tl-3xl`}>
-      <div className="md:w-[80%] mx-auto px-2 md:px-0 md:flex justify-between">
+      <div className="md:w-[80%] mx-auto px-2 md:px-0 flex flex-col md:flex-row justify-between gap-2">
         <div className="text-center">
           <img src={ksl} alt="ksl img" className="w-12 h-12 rounded-full mb-3 mx-auto"/>
           <h4>Kyaw Swar Lynn</h4>
           <p><AiOutlineCopyrightCircle className="inline-flex" /> 2023 ksl</p>
         </div>
 
-        <div>
+        <div className="text-center">
           <h4 className="text-center mb-2">Contact</h4>
           <p>
             <GoLocation className="inline-flex mr-2" /> 63(B), Between 20x21, Mandalay

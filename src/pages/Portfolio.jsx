@@ -12,7 +12,7 @@ function Portfolio() {
     return (
       <div className="basis-1/3 flex-1 relative">
         <img
-          className="rounded-lg object-cover mb-4"
+          className="rounded-lg object-cover mb-4 border"
           width={"100%"}
           height={"100%"}
           layout="responsive"

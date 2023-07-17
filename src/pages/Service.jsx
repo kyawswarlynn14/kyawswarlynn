@@ -1,27 +1,52 @@
-import React from "react";
-import code from "../assets/code.png";
-import design from "../assets/design.png";
-import consulting from "../assets/consulting.png";
+import React, { useState } from "react";
+import webDevelopment from "../assets/web-development.webp";
+import webDesign from "../assets/web-design.jpg";
+import appDevelopment from "../assets/app-development.png";
 
 function Service() {
-  const ServiceCard = ({ src }) => {
-    return (
-      <div className="w-72 mx-auto flex flex-col text-center place-items-center p-2 rounded-xl shadow-2xl">
-        <img src={src} width={100} height={100} />
-        <h3 className="text-lg font-medium py-2  ">Beautiful Designs</h3>
-        <p className=" text-[#fdeed4]">
-          Creating elegant designs suited for your needs following core design
-          theory.
-        </p>
-        <p className="py-2 text-teal-600 text-lg">Design Tools I Use</p>
-        <p>Photoshop</p>
-        <p>Illustrator</p>
-        <p>Figma</p>
-        <p>Indesign</p>
-      </div>
-    );
-  };
+  const [webDevReadMore, setWebDevReadMore] = useState(false);
+  const [webDesReadMore, setWebDesReadMore] = useState(false);
+  const [appDevReadMore, setAppDevReadMore] = useState(false);
 
+  const services = [
+    {
+      image: webDevelopment,
+  
+      title: "Web Development",
+  
+      description:
+        "As a web developer, I specialize in creating dynamic and interactive websites that are tailored to meet your unique business needs. I utilize the latest web technologies and frameworks to build responsive, user-friendly websites that engage your audience. From the initial concept and design to the implementation and deployment, I ensure a seamless development process. Whether you need an e-commerce platform, a content management system, or a custom web application, I can deliver a solution that not only looks great but also functions flawlessly across different browsers and devices.",
+      
+      readMore: webDevReadMore,
+      setReadMore: setWebDevReadMore,
+      
+    },
+    {
+      image: appDevelopment,
+  
+      title: "Mobile App Development",
+  
+      description:
+        "In today's mobile-driven world, having a strong mobile presence is essential for any business. As a mobile app developer, I specialize in creating cutting-edge applications that run seamlessly on iOS and Android platforms. From concept to launch, I work closely with you to understand your app requirements and develop a customized solution that aligns with your business goals. With expertise in both native and hybrid app development, I can create feature-rich, intuitive mobile applications that deliver an exceptional user experience. Whether you need a consumer-facing app or an enterprise solution, I can turn your ideas into reality and help you reach your target audience effectively.",
+  
+      readMore: webDesReadMore,
+      setReadMore: setWebDesReadMore,
+  
+    },
+    {
+      image: webDesign,
+  
+      title: "Web Design",
+  
+      description:
+        "With a keen eye for aesthetics and a deep understanding of user experience, I offer professional web design services that captivate visitors and leave a lasting impression. I believe that a well-designed website is a powerful tool for attracting and retaining customers. Through a combination of creativity and technical expertise, I create visually stunning layouts, intuitive navigation, and compelling graphics that reflect your brand identity. By focusing on usability and accessibility, I ensure that your website is engaging, easy to navigate, and optimized for conversions.",
+  
+      readMore: appDevReadMore,
+      setReadMore: setAppDevReadMore,
+  
+    },
+  ];
+  
   return (
     <div id="service" className="w-[90%] mx-auto mt-10">
       <div className=" mb-4 md:text-lg">
@@ -36,8 +61,8 @@ function Service() {
             React.js, Next.js, Angular, and Node.js
           </span>
           . With my expertise in{" "}
-          <span className="dark:text-teal-500">JavaScript, HTML, and CSS</span> , I
-          craft engaging and user-friendly interfaces.
+          <span className="dark:text-teal-500">JavaScript, HTML, and CSS</span>{" "}
+          , I craft engaging and user-friendly interfaces.
         </p>
 
         <p className="text-md py-2 leading-8 text-[#fdeed4]">
@@ -47,11 +72,28 @@ function Service() {
       </div>
 
       <div className="flex flex-col md:flex-row justify-between gap-8">
-        <ServiceCard src={design} />
+        {
+          services.map(service => (
+            <div className="w-72 h-fit mx-auto flex flex-col text-center place-items-center p-2 rounded-xl shadow-2xl dark:border relative" key={service.title}>
+              <img src={service.image} alt={service.title} className="w-full h-48 absolute top-0 rounded-t-xl" />
 
-        <ServiceCard src={code} />
-
-        <ServiceCard src={consulting} />
+              <h3 className="text-lg font-medium py-2 mt-48 ">{service.title}</h3>
+              <p
+                className={`${
+                  service.readMore ? "h-auto " : "h-28 overflow-hidden"
+                } text-[#fdeed4]`}
+              >
+                {service.description}
+              </p>
+              <button
+                className="btn btn-warning"
+                onClick={() => service.setReadMore(!service.readMore)}
+              >
+                {service.readMore ? <span>Read Less</span> : <span>Read More</span>}
+              </button>
+            </div>
+          ))
+        }
       </div>
     </div>
   );
