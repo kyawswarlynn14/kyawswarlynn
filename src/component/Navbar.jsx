@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
+import { Collapsible } from 'collapsible-react-component'
+import 'collapsible-react-component/dist/index.css'
 
 export default function Navbar({ darkMode, setDarkMode, activeButton, setActiveButton }) {
   const [popUp, setPopUp] = useState(false);
@@ -17,7 +19,7 @@ export default function Navbar({ darkMode, setDarkMode, activeButton, setActiveB
   return (
     <nav className="md:w-[80%] mx-auto md:text-lg pt-3  px-2 flex-col">
       <div className="flex justify-between">
-        <p className=" font-bold tracking-wider font-mono">DevelopedByKSL</p>
+        <p onClick={() => setPopUp(!popUp)} className=" font-bold tracking-wider font-mono">DevelopedByKSL</p>
             
         <div className="flex gap-4">
           <ul className="md:flex gap-8 font-semibold hidden">
@@ -34,7 +36,7 @@ export default function Navbar({ darkMode, setDarkMode, activeButton, setActiveB
             </a>
 
             <a
-              href="#service"
+              href="#services"
               onClick={() => handleClick("services")}
               className={`
                 ${
@@ -76,21 +78,21 @@ export default function Navbar({ darkMode, setDarkMode, activeButton, setActiveB
         </div>
       </div>
 
-      <div
-        className={`${
-          popUp ? "block" : "hidden"
-        } flex flex-col gap-2 mb-4`}
-      >
-        <a onClick={() => setPopUp(!popUp)} href="#home" className="text-gray-200 no-underline border-b pl-4 pb-2 rounded-lg">
-          Home
-        </a>
-        <a onClick={() => setPopUp(!popUp)} href="#service" className="text-gray-200 no-underline border-b pl-4 pb-2 rounded-lg">
-          Services
-        </a>
-        <a onClick={() => setPopUp(!popUp)} href="#portfolio" className="text-gray-200 no-underline border-b pl-4 pb-2 rounded-lg">
-          Portfolio
-        </a>
-      </div>
+      <Collapsible open={popUp} >
+        <div className="flex flex-col gap-2 mb-4 md:hidden">
+          <a onClick={() => handleClick("home")} href="#home" className={`${activeButton === "home" && 'text-blue-500'} text-gray-200 no-underline border-b pl-4 pb-2 rounded-lg`}>
+            Home
+          </a>
+
+          <a onClick={() => handleClick("services")} href="#services" className={`${activeButton === "services" && 'text-blue-500'} text-gray-200 no-underline border-b pl-4 pb-2 rounded-lg`}>
+            Services
+          </a>
+
+          <a onClick={() => handleClick("portfolio")} href="#portfolio" className={`${activeButton === "portfolio" && 'text-blue-500'} text-gray-200 no-underline border-b pl-4 pb-2 rounded-lg`}>
+            Portfolio
+          </a>
+        </div>
+      </Collapsible>
     </nav>
 
   );
