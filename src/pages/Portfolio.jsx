@@ -17,10 +17,12 @@ function Portfolio() {
           height={"100%"}
           layout="responsive"
           src={src}
+          alt={src}
         />
 
         <a
           href={codeLink}
+          rel="noreferrer"
           target="_blank"
           className="btn btn-info absolute top-1 right-1"
         >
@@ -31,7 +33,7 @@ function Portfolio() {
   };
 
   return (
-    <div id="portfolio" className="w-[90%] mx-auto text-lg mt-10">
+    <div id="portfolio" className="w-[90%] mx-auto text-lg pt-12">
       <h3 className="dark:text-[#00FF00] text-2xl md:text-3xl pt-4 pb-1 font-mono font-semibold text-center">
         Portofolio
       </h3>

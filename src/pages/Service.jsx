@@ -53,7 +53,7 @@ function Service() {
   };
 
   return (
-    <div id="service" className="w-[90%] mx-auto mt-10">
+    <div id="service" className="w-[90%] mx-auto pt-16">
       <div className=" mb-4 md:text-lg">
         <h3 className="dark:text-[#00FF00] text-2xl md:text-3xl md:mb-4 py-1 font-mono font-semibold text-center">
           Services I offer
@@ -97,7 +97,7 @@ function Service() {
               {service.description}
             </p>
             <button
-              className="btn btn-primary "
+              className="btn btn-primary mb-2"
               onClick={() => toggleReadMore(service.serviceName)}
             >
               {state[service.serviceName] ? (
